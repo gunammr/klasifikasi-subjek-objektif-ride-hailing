@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Ulasan | Sistem Analisis Ulasan</title>
+    <style>
+                *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI',sans-serif;
+        }
+
+        body{
+            background:#f5f7fb;
+        }
+
+        .page{
+            display:grid;
+            grid-template-columns:280px 1fr;
+            min-height:100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar{
+        background:#FFFFFF;
+        border-right:1px solid rgba(15,23,42,.06);
+        padding:32px 24px;
+        display:flex;
+        flex-direction:column;
+        gap:28px;
+        }
+
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+
+        .brand-icon{
+            width:40px;
+            height:40px;
+            display:grid;
+            place-items:center;
+            border-radius:12px;
+            background:linear-gradient(
+                180deg,
+                #1447E6 0%,
+                #3B79FF 100%
+            );
+            color:#fff;
+            font-size:18px;
+            font-weight:700;
+        }
+
+        .brand-text{
+            display:flex;
+            flex-direction:column;
+            gap:4px;
+        }
+
+        .brand-text h1{
+            margin:0;
+            font-size:16px;
+            line-height:1.2;
+        }
+
+        .brand-text p{
+            margin:0;
+            font-size:14px;
+            color:#475569;
+        }
+
+        .nav-list{
+            list-style:none;
+            padding:0;
+            margin:0;
+            display:grid;
+            gap:10px;
+        }
+
+        .nav-item{
+            border-radius:16px;
+            overflow:hidden;
+        }
+
+        .nav-link{
+            display:flex;
+            align-items:center;
+            gap:14px;
+            width:100%;
+            padding:14px 18px;
+            text-decoration:none;
+            color:#475569;
+            background:transparent;
+            border:1px solid transparent;
+            transition:.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active{
+            background:rgba(20,71,230,.08);
+            color:#0F172A;
+        }
+
+        .nav-link.active{
+            box-shadow:inset 4px 0 0 0 #1447E6;
+            border-color:rgba(20,71,230,.12);
+        }
+
+        .nav-link svg{
+            width:18px;
+            height:18px;
+            flex-shrink:0;
+        }
+
+        /* MAIN */
+        .content{
+            padding:32px;
+            display:flex;
+            flex-direction:column;
+            gap:24px;
+        }
+
+        .content h1{
+            margin-bottom:10px;
+            color:#111827;
+        }
+
+        .content > p{
+            color:#6b7280;
+            margin-bottom:25px;
+        }
+
+        /* TAB */
+        .tab-container{
+            display:flex;
+            gap:15px;
+            margin-bottom:25px;
+        }
+
+        .tab-btn{
+            flex:1;
+            padding:14px;
+            border:none;
+            border-radius:12px;
+            cursor:pointer;
+            font-size:15px;
+            background:white;
+            border:1px solid #d1d5db;
+        }
+
+        .tab-btn.active{
+            background:linear-gradient(
+                90deg,
+                #3b82f6,
+                #1e3a8a
+            );
+            color:white;
+        }
+
+        /* CARD */
+        .card{
+            background:white;
+            border-radius:18px;
+            padding:25px;
+            margin-bottom:25px;
+            border:1px solid #e5e7eb;
+        }
+
+        .card h2{
+            margin-bottom:10px;
+            color:#111827;
+        }
+
+        .card p{
+            color:#6b7280;
+        }
+
+        /* UPLOAD AREA */
+        .upload-area{
+            margin-top:20px;
+            margin-bottom:20px;
+        }
+
+        .upload-box{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            height:220px;
+            border:2px dashed #d1d5db;
+            border-radius:15px;
+            cursor:pointer;
+            background:#fafafa;
+        }
+
+        .upload-box:hover{
+            background:#f3f4f6;
+        }
+
+        .upload-icon{
+            font-size:50px;
+            color:#9ca3af;
+            margin-bottom:15px;
+        }
+
+        /* BUTTONS */
+        .action-row{
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .button-group{
+            display:flex;
+            gap:15px;
+        }
+
+        .btn-predict{
+            padding:14px 40px;
+            border:none;
+            border-radius:12px;
+            cursor:pointer;
+            color:white;
+            font-size:15px;
+            background:linear-gradient(
+                90deg,
+                #3b82f6,
+                #1e3a8a
+            );
+        }
+
+        .btn-reset{
+            padding:14px 25px;
+            border:none;
+            border-radius:12px;
+            cursor:pointer;
+            color:white;
+            font-size:15px;
+            background:#ef4444;
+        }
+
+        /* TIPS */
+        .tips-box{
+            background:#eef6ff;
+            border:1px solid #bfdbfe;
+            border-radius:12px;
+            padding:15px;
+            width:380px;
+        }
+
+        .tips-box h4{
+            margin-bottom:10px;
+            color:#1d4ed8;
+        }
+
+        .tips-box ul{
+            padding-left:20px;
+        }
+
+        .tips-box li{
+            margin-bottom:8px;
+            color:#374151;
+        }
+
+        /* RESULT */
+        .result-card{
+            min-height:320px;
+        }
+
+        .result-placeholder{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:250px;
+            text-align:center;
+        }
+
+        .result-icon{
+            width:70px;
+            height:70px;
+            border:3px solid #d1d5db;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:35px;
+            color:#9ca3af;
+            margin-bottom:15px;
+        }
+
+        .result-placeholder h3{
+            color:#374151;
+            margin-bottom:8px;
+        }
+
+        .result-placeholder p{
+            color:#9ca3af;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width:1180px){
+            .page{
+                grid-template-columns:1fr;
+            }
+
+            .sidebar{
+                flex-direction:row;
+                flex-wrap:wrap;
+                gap:16px;
+            }
+
+            .nav-list{
+                width:100%;
+            }
+        }
+            
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">SA</div>
+
+            <div class="brand-text">
+            <h1>Sistem Analisis</h1>
+            <p>Ulasan</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+
+            <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">
+                Dashboard
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="hasil.html">
+                Hasil Analisis
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="input.html">
+                Input Ulasan
+                </a>
+            </li>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <h1>Input Ulasan Baru</h1>
+        <p>
+            Masukkan teks ulasan manual atau upload file CSV
+            untuk prediksi batch
+        </p>
+
+        <!-- Tab -->
+        <div class="tab-container">
+            <button class="tab-btn">Input Manual</button>
+            <button class="tab-btn active">Upload CSV</button>
+        </div>
+
+        <!-- Upload Card -->
+        <section class="card">
+
+            <h2>Upload File</h2>
+            <p>Format File .CSV</p>
+
+            <div class="upload-area">
+                <input type="file" id="csvFile" hidden>
+
+                <label for="csvFile" class="upload-box">
+                    <div class="upload-icon">
+                        ⬆
+                    </div>
+                    <p>Drag File Here</p>
+                </label>
+            </div>
+
+            <div class="action-row">
+
+                <div class="button-group">
+                    <button class="btn-predict">
+                        Prediksi
+                    </button>
+
+                    <button class="btn-reset">
+                        Reset
+                    </button>
+                </div>
+
+                <div class="tips-box">
+                    <h4>Tips:</h4>
+
+                    <ul>
+                        <li>
+                            <strong>Ulasan Subjektif:</strong>
+                            mengandung opini, perasaan,
+                            atau penilaian pribadi
+                        </li>
+
+                        <li>
+                            <strong>Ulasan Objektif:</strong>
+                            berisi fakta, spesifikasi,
+                            atau informasi terukur
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Result Card -->
+        <section class="card result-card">
+
+            <h2>Hasil Prediksi</h2>
+
+            <div class="result-placeholder">
+
+                <div class="result-icon">
+                    !
+                </div>
+
+                <h3>Belum ada hasil prediksi</h3>
+
+                <p>
+                    Masukkan ulasan dan klik tombol Prediksi
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
