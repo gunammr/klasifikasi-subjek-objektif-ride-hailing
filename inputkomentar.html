@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Ulasan | Sistem Analisis Ulasan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+        }
+
+        .page {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+
+        /* ==================== SIDEBAR REVISI ==================== */
+        .sidebar {
+            background: #FFFFFF;
+            border-right: 1px solid #e2e8f0;
+            padding: 32px 0 32px 24px; /* Padding kanan dikosongkan agar menu aktif menempel ke kanan jika ditarik */
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Logo & Judul Sesuai Gambar */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .brand-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: #2563eb; /* Biru cerah sesuai gambar */
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .brand-text h1 {
+            font-size: 18px;
+            color: #000000;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .brand-text p {
+            font-size: 15px;
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        /* Navigasi Menu */
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-right: 16px; /* Memberi ruang untuk menu non-aktif */
+        }
+
+        .nav-item {
+            width: 100%;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #475569;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        /* Style Menu Aktif Sesuai Gambar (Hasil Analisis) */
+        .nav-item.active-menu {
+            margin-right: -16px; /* Menarik elemen agar pas ke batas kanan jika diperlukan */
+        }
+
+        .nav-item.active-menu .nav-link {
+            background: #eff6ff; /* Background biru muda */
+            color: #0f172a;
+            font-weight: 500;
+            border-radius: 16px 0 0 16px; /* Tumpul di kiri, rata di kanan */
+            border-left: 5px solid #1d4ed8; /* Garis vertikal biru tebal di kiri */
+            padding-left: 11px; /* Kompensasi border agar teks tetap presisi */
+        }
+
+        .nav-link svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: inherit;
+        }
+
+
+        /* ==================== MAIN CONTENT ==================== */
+        .content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .tab-container {
+            display: flex;
+            gap: 16px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            background: white;
+            color: #64748b;
+        }
+
+        .tab-btn.active-manual {
+            background: linear-gradient(90deg, #e129ad, #c61191);
+            color: white;
+            border: none;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .textarea-ulasan {
+            width: 100%;
+            height: 180px;
+            padding: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            resize: none;
+            font-size: 15px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .action-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .btn-predict {
+            padding: 12px 32px;
+            border: none;
+            
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            background: #1d3ec1;
+            font-size: 15px;
+        }
+
+        .btn-reset {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            background: #db5252;
+            font-size: 15px;
+            margin-left: 8px;
+        }
+
+        .tips-box {
+            background: #eff6ff;
+            border-radius: 8px;
+            padding: 16px;
+            max-width: 450px;
+        }
+
+        .result-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .result-icon-circle {
+            width: 56px;
+            height: 56px;
+            border: 2px solid #cbd5e1;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 1024px) {
+            .page { grid-template-columns: 1fr; }
+            .sidebar { padding: 24px; }
+            .nav-list { flex-direction: row; }
+            .nav-item.active-menu { margin-right: 0; }
+            .nav-item.active-menu .nav-link { border-radius: 12px; border-left: none; border-bottom: 4px solid #1d4ed8; padding-left: 16px; }
+            .action-row { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">SA</div>
+            <div class="brand-text">
+                <h1>Sistem Analisis</h1>
+                <p>Ulasan</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item active-menu">
+                    <a class="nav-link" href="#">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="4" y1="18" x2="14" y2="18"/></svg>
+                        Hasil Analisis
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="14" y2="12"/></svg>
+                        Input Ulasan
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div>
+            <h2>Input Ulasan Baru</h2>
+            <p style="color:#64748b; font-size:14px; margin-top: 4px;">Masukkan teks ulasan manual atau upload file CSV untuk prediksi batch</p>
+        </div>
+
+        <div class="tab-container">
+            <button class="tab-btn active-manual">Input Manual</button>
+            <button class="tab-btn">Upload CSV</button>
+        </div>
+
+        <section class="card">
+            <h3 style="font-size: 16px; color:#0f172a; margin-bottom: 12px;">Form Input Ulasan</h3>
+            <p style="font-size: 14px; color:#64748b;">Teks Ulasan</p>
+            <textarea class="textarea-ulasan" placeholder="Contoh: Saya sangat puas karena proses pemesanan makanan melalui aplikasi berjalan lancar dan cepat."></textarea>
+
+            <div class="action-row">
+                <div>
+                    <button class="btn-predict">Prediksi</button>
+                    <button class="btn-reset">Reset</button>
+                </div>
+                <div class="tips-box">
+                    <p style="color:#1e40af; font-weight:600; font-size:13px; margin-bottom: 4px;">Tips:</p>
+                    <ul style="padding-left:16px; font-size:13px; color:#1e40af; line-height: 1.6;">
+                        <li><strong>Ulasan Subjektif:</strong> mengandung opini, perasaan, atau penilaian pribadi</li>
+                        <li><strong>Ulasan Objektif:</strong> berisi fakta, spesifikasi, atau informasi terukur</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3 style="font-size: 16px; color:#0f172a; margin-bottom: 16px;">Hasil Prediksi</h3>
+            <div class="result-placeholder">
+                <div class="result-icon-circle">!</div>
+                <h4 style="color:#475569; font-weight: 600; margin-bottom: 4px;">Belum ada hasil prediksi</h4>
+                <p style="color:#94a3b8; font-size:14px;">Masukkan ulasan dan klik tombol Prediksi</p>
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
