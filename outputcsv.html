@@ -6,11 +6,14 @@
     <title>Input Ulasan | Sistem Analisis Ulasan</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="page">
+      <!-- Sidebar -->
       <aside class="sidebar">
         <div class="brand">
           <div class="brand-icon">SA</div>
+
           <div class="brand-text">
             <h1>Sistem Analisis</h1>
             <p>Ulasan</p>
@@ -29,9 +32,9 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <line x1="3" y1="12" x2="21" y2="12" />
-                  <line x1="3" y1="6" x2="21" y2="6" />
-                  <line x1="3" y1="18" x2="21" y2="18" />
+                  <path d="M3 12h18" />
+                  <path d="M3 6h18" />
+                  <path d="M3 18h18" />
                 </svg>
                 Dashboard
               </a>
@@ -46,16 +49,16 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <line x1="4" y1="6" x2="20" y2="6" />
-                  <line x1="4" y1="10" x2="20" y2="10" />
-                  <line x1="4" y1="14" x2="20" y2="14" />
-                  <line x1="4" y1="18" x2="14" y2="18" />
+                  <path d="M4 6h16" />
+                  <path d="M4 10h16" />
+                  <path d="M4 14h16" />
+                  <path d="M4 18h10" />
                 </svg>
                 Hasil Analisis
               </a>
             </li>
-            <li class="nav-item active-menu">
-              <a class="nav-link" href="../inputkomentar.html">
+            <li class="nav-item">
+              <a class="nav-link active" href="inputkomentar.html">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -74,18 +77,19 @@
         </nav>
       </aside>
 
+      <!-- Main Content -->
       <main class="content">
-        <div>
-          <h2>Input Ulasan Baru</h2>
-          <p style="color: #64748b; font-size: 14px; margin-top: 4px">
-            Masukkan teks ulasan manual atau upload file CSV untuk prediksi
-            batch
-          </p>
-        </div>
+        <h1>Input Ulasan Baru</h1>
+        <p>
+          Masukkan teks ulasan manual atau upload file CSV untuk prediksi batch
+        </p>
 
+        <!-- Tab -->
         <div class="tab-container">
-          <button class="tab-btn active-manual" onclick="pindahmanual()">Input Manual</button>
-          <button class="tab-btn" onclick="pindahcsv()">Upload CSV</button>
+          <button class="tab-btn" onclick="pindahmanual()">Input Manual</button>
+          
+          <button class="tab-btn active" onclick="pindahcsv()">Upload CSV</button>
+
           <script>
             function pindahmanual() {
               window.location.href = "inputkomentar.html";
@@ -97,65 +101,55 @@
           </script>
         </div>
 
+        <!-- Upload Card -->
         <section class="card">
-          <h3 style="font-size: 16px; color: #0f172a; margin-bottom: 12px">
-            Form Input Ulasan
-          </h3>
-          <p style="font-size: 14px; color: #64748b">Teks Ulasan</p>
-          <textarea
-            class="textarea-ulasan"
-            placeholder="Contoh: Saya sangat puas karena proses pemesanan makanan melalui aplikasi berjalan lancar dan cepat."
-          ></textarea>
+          <h2>Upload File</h2>
+          <p>Format File .CSV</p>
+
+          <div class="upload-area">
+            <input type="file" id="csvFile" hidden />
+
+            <label for="csvFile" class="upload-box">
+              <div class="upload-icon">⬆</div>
+              <p>Drag File Here</p>
+            </label>
+          </div>
 
           <div class="action-row">
-            <div>
+            <div class="button-group">
               <button class="btn-predict">Prediksi</button>
+
               <button class="btn-reset">Reset</button>
             </div>
+
             <div class="tips-box">
-              <p
-                style="
-                  color: #1e40af;
-                  font-weight: 600;
-                  font-size: 13px;
-                  margin-bottom: 4px;
-                "
-              >
-                Tips:
-              </p>
-              <ul
-                style="
-                  padding-left: 16px;
-                  font-size: 13px;
-                  color: #1e40af;
-                  line-height: 1.6;
-                "
-              >
+              <h4>Tips:</h4>
+
+              <ul>
                 <li>
-                  <strong>Ulasan Subjektif:</strong> mengandung opini, perasaan,
-                  atau penilaian pribadi
+                  <strong>Ulasan Subjektif:</strong>
+                  mengandung opini, perasaan, atau penilaian pribadi
                 </li>
+
                 <li>
-                  <strong>Ulasan Objektif:</strong> berisi fakta, spesifikasi,
-                  atau informasi terukur
+                  <strong>Ulasan Objektif:</strong>
+                  berisi fakta, spesifikasi, atau informasi terukur
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section class="card">
-          <h3 style="font-size: 16px; color: #0f172a; margin-bottom: 16px">
-            Hasil Prediksi
-          </h3>
+        <!-- Result Card -->
+        <section class="card result-card">
+          <h2>Hasil Prediksi</h2>
+
           <div class="result-placeholder">
-            <div class="result-icon-circle">!</div>
-            <h4 style="color: #475569; font-weight: 600; margin-bottom: 4px">
-              Belum ada hasil prediksi
-            </h4>
-            <p style="color: #94a3b8; font-size: 14px">
-              Masukkan ulasan dan klik tombol Prediksi
-            </p>
+            <div class="result-icon">!</div>
+
+            <h3>Belum ada hasil prediksi</h3>
+
+            <p>Masukkan ulasan dan klik tombol Prediksi</p>
           </div>
         </section>
       </main>
