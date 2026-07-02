@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from preprocessing import normalize_text
 from datetime import datetime
 from pathlib import Path
 from io import BytesIO
@@ -62,7 +63,9 @@ with tab1:
             )
 
         else:
-
+            ulasan_asli = ulasan
+            ulasan = normalize_text(ulasan)
+            
             ulasan_tfidf = vectorizer.transform(
                 [ulasan]
             ).toarray()
@@ -93,10 +96,28 @@ with tab1:
                 "Confidence Score",
                 f"{confidence * 100:.2f}%"
             )
+            
+            st.subheader("Detail Prediksi")
+
+            hasil_tampil = pd.DataFrame(
+                {
+                    "Review Asli": [ulasan_asli],
+                    "Hasil Preprocessing": [ulasan],
+                    "Label": [label],
+                    "Confidence": [f"{confidence * 100:.2f}%"]
+                }
+            )
+
+            st.dataframe(
+                hasil_tampil,
+                use_container_width=True,
+                hide_index=True
+            )
 
             data_baru = pd.DataFrame([
                 {
-                    "review": ulasan,
+                    "review": ulasan_asli,
+                    "review_cleaned": ulasan,
                     "label": label,
                     "confidence": round(confidence, 4),
                     "tanggal": datetime.now().strftime(
@@ -175,7 +196,8 @@ with tab2:
 
                 for review in df_upload["review"]:
 
-                    review = str(review)
+                    review_asli = str(review)
+                    review = normalize_text(review_asli)
 
                     review_tfidf = vectorizer.transform(
                         [review]
@@ -201,7 +223,8 @@ with tab2:
 
                     hasil_prediksi.append(
                         {
-                            "review": review,
+                            "review": review_asli,
+                            "review_clean": review,
                             "label": label,
                             "confidence": round(
                                 confidence,

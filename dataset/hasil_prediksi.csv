@@ -1,34 +1,63 @@
-review,label,confidence,tanggal
-Aplikasi sering error saat pembayaran,Objektif,0.912135972011711,2026-06-19 02:37:09
-Aplikasinya bagus,Subjektif,0.8640848703958212,2026-06-19 02:38:32
-Aplikasi seringkali mengalami bug,Objektif,0.6109,2026-06-19 03:08:02
-Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:09:11
-Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:09:11
-Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:09:11
-Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:09:11
-Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:09:11
-Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:09:11
-Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:09:11
-Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:09:11
-Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:09:11
-Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:09:11
-Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:10:05
-Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:10:05
-Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:10:05
-Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:10:05
-Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:10:05
-Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:10:05
-Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:10:05
-Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:10:05
-Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:10:05
-Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:10:05
-Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:25:21
-Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:25:21
-Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:25:21
-Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:25:21
-Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:25:21
-Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:25:21
-Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:25:21
-Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:25:21
-Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:25:21
-Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:25:21
+review,label,confidence,tanggal,review_cleaned,review_clean
+Aplikasi sering error saat pembayaran,Objektif,0.912135972011711,2026-06-19 02:37:09,,
+Aplikasinya bagus,Subjektif,0.8640848703958212,2026-06-19 02:38:32,,
+Aplikasi seringkali mengalami bug,Objektif,0.6109,2026-06-19 03:08:02,,
+Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:09:11,,
+Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:09:11,,
+Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:09:11,,
+Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:09:11,,
+Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:09:11,,
+Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:09:11,,
+Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:09:11,,
+Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:09:11,,
+Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:09:11,,
+Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:09:11,,
+Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:10:05,,
+Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:10:05,,
+Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:10:05,,
+Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:10:05,,
+Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:10:05,,
+Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:10:05,,
+Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:10:05,,
+Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:10:05,,
+Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:10:05,,
+Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:10:05,,
+Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:25:21,,
+Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:25:21,,
+Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:25:21,,
+Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:25:21,,
+Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:25:21,,
+Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:25:21,,
+Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:25:21,,
+Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:25:21,,
+Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:25:21,,
+Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:25:21,,
+Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,Subjektif,0.6732,2026-07-02 10:23:27,aplikasinya bagus bgt driver driver nya cepet,
+Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,Subjektif,0.6732,2026-07-02 10:29:14,aplikasinya bagus bgt driver driver nya cepet,
+"Gk puas sama aplikasinya, lemottt parahhh!!!",Subjektif,0.5471,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,tidak puas sama aplikasinya lemot parah
+Pembayaran gagal 2x tp saldo kepotong.,Objektif,0.8763,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,pembayaran gagal 2 kali tapi saldo kepotong
+"Driver nya ramah bgt, makasiiihh :)",Subjektif,0.8459,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,driver nya ramah bgt makasihh
+Harga 15rb masih cukup murah menurut saya.,Subjektif,0.5467,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,harga 15 ribu masih cukup murah menurut saya
+"Aplikasi sering error pas login, tolong diperbaiki yaa.",Objektif,0.9318,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,aplikasi sering error pas login tolong diperbaiki yaa
+"Ga bisa daftar akun, padahal udh coba berkali-kali.",Objektif,0.9726,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,tidak bisa daftar akun padahal sudah coba berkali kali
+"Pelayanan customer service oke bgt, responnya cepet.",Subjektif,0.8093,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,pelayanan customer service oke bgt responnya cepet
+"Silakan cek https://subride.com karena masih error, email saya user123@gmail.com.",Objektif,0.9204,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,silakan cek karena masih error email saya
+"Tp overall saya puas, aplikasinya membantu aktivitas sehari-hari.",Objektif,0.5,2026-07-02 10:32:23,Aplikasinya BAGUSSSS bgt!!! Driver2 nya cepettt....,tapi overall saya puas aplikasinya membantu aktivitas sehari hari
+"Gk puas sama aplikasinya, lemottt parahhh!!!",Subjektif,0.5471,2026-07-02 10:32:58,,tidak puas sama aplikasinya lemot parah
+Pembayaran gagal 2x tp saldo kepotong.,Objektif,0.8763,2026-07-02 10:32:58,,pembayaran gagal 2 kali tapi saldo kepotong
+"Driver nya ramah bgt, makasiiihh :)",Subjektif,0.8459,2026-07-02 10:32:58,,driver nya ramah bgt makasihh
+Harga 15rb masih cukup murah menurut saya.,Subjektif,0.5467,2026-07-02 10:32:58,,harga 15 ribu masih cukup murah menurut saya
+"Aplikasi sering error pas login, tolong diperbaiki yaa.",Objektif,0.9318,2026-07-02 10:32:58,,aplikasi sering error pas login tolong diperbaiki yaa
+"Ga bisa daftar akun, padahal udh coba berkali-kali.",Objektif,0.9726,2026-07-02 10:32:58,,tidak bisa daftar akun padahal sudah coba berkali kali
+"Pelayanan customer service oke bgt, responnya cepet.",Subjektif,0.8093,2026-07-02 10:32:58,,pelayanan customer service oke bgt responnya cepet
+"Silakan cek https://subride.com karena masih error, email saya user123@gmail.com.",Objektif,0.9204,2026-07-02 10:32:58,,silakan cek karena masih error email saya
+"Tp overall saya puas, aplikasinya membantu aktivitas sehari-hari.",Objektif,0.5,2026-07-02 10:32:58,,tapi overall saya puas aplikasinya membantu aktivitas sehari hari
+"Gk puas sama aplikasinya, lemottt parahhh!!!",Subjektif,0.5471,2026-07-02 10:45:11,,tidak puas sama aplikasinya lemot parah
+Pembayaran gagal 2x tp saldo kepotong.,Objektif,0.8763,2026-07-02 10:45:11,,pembayaran gagal 2 kali tapi saldo kepotong
+"Driver nya ramah bgt, makasiiihh :)",Subjektif,0.967,2026-07-02 10:45:11,,driver nya ramah banget makasihh
+Harga 15rb masih cukup murah menurut saya.,Subjektif,0.5467,2026-07-02 10:45:11,,harga 15 ribu masih cukup murah menurut saya
+"Aplikasi sering error pas login, tolong diperbaiki yaa.",Objektif,0.9256,2026-07-02 10:45:11,,aplikasi sering error pas login tolong diperbaiki ya
+"Ga bisa daftar akun, padahal udh coba berkali-kali.",Objektif,0.9726,2026-07-02 10:45:11,,tidak bisa daftar akun padahal sudah coba berkali kali
+"Pelayanan customer service oke bgt, responnya cepet.",Subjektif,0.892,2026-07-02 10:45:11,,pelayanan customer service oke banget responnya cepet
+"Silakan cek https://subride.com karena masih error, email saya user123@gmail.com.",Objektif,0.9204,2026-07-02 10:45:11,,silakan cek karena masih error email saya
+"Tp overall saya puas, aplikasinya membantu aktivitas sehari-hari.",Objektif,0.5,2026-07-02 10:45:11,,tapi overall saya puas aplikasinya membantu aktivitas sehari hari
