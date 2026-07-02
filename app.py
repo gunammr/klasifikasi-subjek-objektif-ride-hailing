@@ -27,7 +27,7 @@ with st.sidebar:
 
         styles={
             "container": {"padding": 0, "vertical-align": "top", "background-color": "transparent"},
-        } 
+        }
     )
 
 
