@@ -1,37 +1,70 @@
-review,label,confidence,tanggal
-Aplikasi sering error saat pembayaran,Objektif,0.912135972011711,2026-06-19 02:37:09
-Aplikasinya bagus,Subjektif,0.8640848703958212,2026-06-19 02:38:32
-Aplikasi seringkali mengalami bug,Objektif,0.6109,2026-06-19 03:08:02
-Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:09:11
-Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:09:11
-Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:09:11
-Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:09:11
-Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:09:11
-Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:09:11
-Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:09:11
-Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:09:11
-Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:09:11
-Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:09:11
-Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:10:05
-Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:10:05
-Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:10:05
-Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:10:05
-Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:10:05
-Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:10:05
-Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:10:05
-Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:10:05
-Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:10:05
-Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:10:05
-Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:25:21
-Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:25:21
-Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:25:21
-Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:25:21
-Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:25:21
-Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:25:21
-Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:25:21
-Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:25:21
-Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:25:21
-Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:25:21
-Saya merasa senang dengan pelayanannya,Subjektif,0.6135,2026-07-02 01:25:12
-Notifnya ganggu,Subjektif,0.8337,2026-07-02 01:25:40
-Fitur notifikasinya ganggu,Subjektif,0.8115,2026-07-02 01:25:50
+review,label,confidence,tanggal,review_cleaned,review_clean
+Aplikasi sering error saat pembayaran,Objektif,0.912135972011711,2026-06-19 02:37:09,,
+Aplikasinya bagus,Subjektif,0.8640848703958212,2026-06-19 02:38:32,,
+Aplikasi seringkali mengalami bug,Objektif,0.6109,2026-06-19 03:08:02,,
+Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:09:11,,
+Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:09:11,,
+Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:09:11,,
+Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:09:11,,
+Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:09:11,,
+Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:09:11,,
+Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:09:11,,
+Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:09:11,,
+Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:09:11,,
+Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:09:11,,
+Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:10:05,,
+Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:10:05,,
+Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:10:05,,
+Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:10:05,,
+Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:10:05,,
+Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:10:05,,
+Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:10:05,,
+Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:10:05,,
+Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:10:05,,
+Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:10:05,,
+Driver datang lebih cepat dari perkiraan dan sangat ramah selama perjalanan.,Subjektif,0.8983,2026-07-01 17:25:21,,
+Aplikasi menyediakan pilihan layanan motor.,Objektif,0.7181,2026-07-01 17:25:21,,
+Saya kecewa karena pengemudi membatalkan pesanan tanpa memberikan alasan.,Subjektif,0.6846,2026-07-01 17:25:21,,
+Pembayaran dapat dilakukan menggunakan uang tunai maupun dompet digital.,Subjektif,0.5418,2026-07-01 17:25:21,,
+Menurut saya tarif perjalanan pada jam sibuk terlalu mahal.,Objektif,0.6491,2026-07-01 17:25:21,,
+Aplikasi menampilkan estimasi waktu kedatangan pengemudi sebelum perjalanan dimulai.,Subjektif,0.9038,2026-07-01 17:25:21,,
+Fitur pelacakan lokasi secara real-time sangat membantu.,Objektif,0.5573,2026-07-01 17:25:21,,
+Riwayat perjalanan dapat dilihat kembali melalui menu aktivitas.,Objektif,0.6097,2026-07-01 17:25:21,,
+Saya sangat puas karena kendaraan yang digunakan bersih dan nyaman.,Subjektif,0.7124,2026-07-01 17:25:21,,
+Aplikasi mengirimkan notifikasi ketika pengemudi telah tiba di lokasi penjemputan.,Objektif,0.7721,2026-07-01 17:25:21,,
+Saya merasa senang dengan pelayanannya,Subjektif,0.6135,2026-07-02 01:25:12,,
+Notifnya ganggu,Subjektif,0.8337,2026-07-02 01:25:40,,
+Fitur notifikasinya ganggu,Subjektif,0.8115,2026-07-02 01:25:50,,
+"Aplikasinya BAGUSSSS bgt!!! Driver2 dateng 5mnt lbh cepettt, tp pembayaran 15rb gagal 2x. Cek https://subride.com atau email ke user123@gmail.com yaa.",Objektif,0.9012,2026-07-02 12:52:12,aplikasinya bagus banget driver driver datang 5 menit lebih cepet tapi pembayaran 15 ribu gagal 2 kali cek atau email ke ya,
+sdgksdrgdsumpah drivernya anjing banget,Subjektif,0.7605,2026-07-02 12:53:24,sdgksdrgdsumpah drivernya anjing banget,
+fitur cari makanan tidak bisa dipencet,Objektif,0.7109,2026-07-02 12:53:43,fitur cari makanan tidak bisa dipencet,
+"Aplikasinya BAGUSSSS bgt!!! Driver2 dateng 5mnt lbh cepettt, tp pembayaran 15rb gagal 2x.",Objektif,0.8642,2026-07-02 12:55:49,,aplikasinya bagus banget driver driver datang 5 menit lebih cepet tapi pembayaran 15 ribu gagal 2 kali
+"Saya sangat puas dengan pelayanan aplikasi ini, recommended banget!",Subjektif,0.7899,2026-07-02 12:55:49,,saya sangat puas dengan pelayanan aplikasi ini recommended banget
+Driver datang pukul 08.15 sesuai jadwal yang tertera pada aplikasi.,Objektif,0.5215,2026-07-02 12:55:49,,driver datang pukul 08 15 sesuai jadwal yang tertera pada aplikasi
+Pembayaran menggunakan QRIS gagal sebanyak 3 kali.,Objektif,0.7005,2026-07-02 12:55:49,,pembayaran menggunakan qris gagal sebanyak 3 kali
+Menurut saya tampilan aplikasi ini jelek dan membingungkan.,Subjektif,0.6207,2026-07-02 12:55:49,,menurut saya tampilan aplikasi ini jelek dan membingungkan
+Aplikasi sering force close setelah diperbarui ke versi terbaru.,Objektif,0.7795,2026-07-02 12:55:49,,aplikasi sering force close setelah diperbarui ke versi terbaru
+"Pelayanan customer service sangat buruk, saya kecewa.",Subjektif,0.857,2026-07-02 12:55:49,,pelayanan customer service sangat buruk saya kecewa
+Promo diskon 20rb berhasil digunakan saat checkout.,Subjektif,0.5189,2026-07-02 12:55:49,,promo diskon 20 ribu berhasil digunakan saat checkout
+Menurutku aplikasi ini paling bagus dibanding kompetitor.,Subjektif,0.8635,2026-07-02 12:55:49,,menurutku aplikasi ini paling bagus dibanding kompetitor
+Pesanan tiba dalam waktu 12 menit sejak driver menerima order.,Objektif,0.6864,2026-07-02 12:55:49,,pesanan tiba dalam waktu 12 menit sejak driver menerima order
+"Gk bakal pake aplikasi ini lagi, lemottt parahhh.",Subjektif,0.8657,2026-07-02 12:55:49,,tidak bakal pakai aplikasi ini lagi lemot parah
+Driver menggunakan helm dan atribut lengkap saat mengantar pesanan.,Subjektif,0.7152,2026-07-02 12:55:49,,driver menggunakan helm dan atribut lengkap saat mengantar pesanan
+"Aplikasinya mantappp, fiturnya keren bgt dan gampang dipakai.",Subjektif,0.7282,2026-07-02 12:55:49,,aplikasinya mantap fiturnya keren banget dan gampang dipakai
+Lokasi driver berpindah secara real-time selama proses pengantaran.,Subjektif,0.5702,2026-07-02 12:55:49,,lokasi driver berpindah secara real time selama proses pengantaran
+Menurut saya harga ongkirnya terlalu mahal untuk jarak yang dekat.,Subjektif,0.8724,2026-07-02 12:55:49,,menurut saya harga ongkirnya terlalu mahal untuk jarak yang dekat
+"Aplikasinya BAGUSSSS bgt!!! Driver2 dateng 5mnt lbh cepettt, tp pembayaran 15rb gagal 2x.",Objektif,0.8642,2026-07-02 12:56:38,,aplikasinya bagus banget driver driver datang 5 menit lebih cepet tapi pembayaran 15 ribu gagal 2 kali
+"Saya sangat puas dengan pelayanan aplikasi ini, recommended banget!",Subjektif,0.7899,2026-07-02 12:56:38,,saya sangat puas dengan pelayanan aplikasi ini recommended banget
+Driver datang pukul 08.15 sesuai jadwal yang tertera pada aplikasi.,Objektif,0.5215,2026-07-02 12:56:38,,driver datang pukul 08 15 sesuai jadwal yang tertera pada aplikasi
+Pembayaran menggunakan QRIS gagal sebanyak 3 kali.,Objektif,0.7005,2026-07-02 12:56:38,,pembayaran menggunakan qris gagal sebanyak 3 kali
+Menurut saya tampilan aplikasi ini jelek dan membingungkan.,Subjektif,0.6207,2026-07-02 12:56:38,,menurut saya tampilan aplikasi ini jelek dan membingungkan
+Aplikasi sering force close setelah diperbarui ke versi terbaru.,Objektif,0.7795,2026-07-02 12:56:38,,aplikasi sering force close setelah diperbarui ke versi terbaru
+"Pelayanan customer service sangat buruk, saya kecewa.",Subjektif,0.857,2026-07-02 12:56:38,,pelayanan customer service sangat buruk saya kecewa
+Promo diskon 20rb berhasil digunakan saat checkout.,Subjektif,0.5189,2026-07-02 12:56:38,,promo diskon 20 ribu berhasil digunakan saat checkout
+Menurutku aplikasi ini paling bagus dibanding kompetitor.,Subjektif,0.8635,2026-07-02 12:56:38,,menurutku aplikasi ini paling bagus dibanding kompetitor
+Pesanan tiba dalam waktu 12 menit sejak driver menerima order.,Objektif,0.6864,2026-07-02 12:56:38,,pesanan tiba dalam waktu 12 menit sejak driver menerima order
+"Gk bakal pake aplikasi ini lagi, lemottt parahhh.",Subjektif,0.8657,2026-07-02 12:56:38,,tidak bakal pakai aplikasi ini lagi lemot parah
+Driver menggunakan helm dan atribut lengkap saat mengantar pesanan.,Subjektif,0.7152,2026-07-02 12:56:38,,driver menggunakan helm dan atribut lengkap saat mengantar pesanan
+"Aplikasinya mantappp, fiturnya keren bgt dan gampang dipakai.",Subjektif,0.7282,2026-07-02 12:56:38,,aplikasinya mantap fiturnya keren banget dan gampang dipakai
+Lokasi driver berpindah secara real-time selama proses pengantaran.,Subjektif,0.5702,2026-07-02 12:56:38,,lokasi driver berpindah secara real time selama proses pengantaran
+Menurut saya harga ongkirnya terlalu mahal untuk jarak yang dekat.,Subjektif,0.8724,2026-07-02 12:56:38,,menurut saya harga ongkirnya terlalu mahal untuk jarak yang dekat
